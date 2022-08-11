@@ -49,7 +49,7 @@
     <p style="height:1100px"></p>
      
 
-     <div class="login-box" style="margin-top:300px;   width: 700px; background: #006666;">
+     <div class="login-box" style="margin-top:300px;   width: 70%; background: #006666;">
   <h2>Registration</h2>
               <form class="patient-register-form" method="POST" action="RegisterPatientController" onsubmit="alert('success');">
     <div class="user-box">
