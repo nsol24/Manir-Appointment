@@ -48,7 +48,7 @@
     <p style="height:600px"></p>
      
 
-     <div class="login-box" style="margin-top:60px; width:50%">
+     <div class="login-box" style="margin-top:60px; width:80%">
   <h2>Login</h2>
               <form action="LoginPatController" method="POST" class="patient-login-form">
     <div class="user-box">
