@@ -35,23 +35,10 @@
 	<% Staff staff = StaffDAO.getStaffById(staff_id); %>
     <!-- NAVBAR -->
     <% System.out.print(staff_id);%>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-1 py-3">
-        <div class="container-xl">
-          <a class="navbar-brand" >
-                <img src="img/logo-clinic.png" class="h-20" alt="logo">
-            </a>
-           
-            <!-- Nav -->
-                <div class="navbar-nav mx-lg-auto">
-                    <a class="nav-item nav-link" aria-current="page" style="font-family:times;font-size:30px; word-spacing:30px; letter-spacing:10px">KLINIK KESIHATAN MANIR</a>
-
-                </div>
-                </div>
-    </nav>
     <!-- NAVBAR -->
     
-   <div class="wrapper">
-    <div class="sidebar" style="height:auto">
+   <div class="wrapper" >
+    <div class="sidebar"  style="margin-bottom: -5000px; padding-bottom: 5000px;">
         <h2>Navigation</h2>
         <ul>
             <li><a href="admin-account.jsp">My Profile</a></li>

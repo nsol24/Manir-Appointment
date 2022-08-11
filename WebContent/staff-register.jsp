@@ -2,6 +2,21 @@
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+
+<%@ page import="ManirAppointment.model.Staff,ManirAppointment.dao.StaffDAO,java.sql.*, java.util.*" %>
+<%
+    	//prevent caching of jsp pages
+    	response.setHeader("Cache-Control","no-cache");
+    	response.setHeader("Cache-Control","no-store");
+    	response.setHeader("Pragma","no-cache");
+    	response.setDateHeader("Expires",0);
+    	
+    	//get the session and check if session is null, redirect to login page 
+    	if(session.getAttribute("sessionId")==null){
+    		response.sendRedirect("staff-login.jsp");
+    	}
+    		
+    %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,24 +29,19 @@
     <link rel="icon" href="img/favicon.png">
 </head>
 <body class="register-option-body">
+<!-- get session -->
+	<!-- received from login page -->
+	<% int staff_id = (Integer) session.getAttribute("sessionId");%>  
+	<!-- want to get customer details -->
+	<% Staff staff = StaffDAO.getStaffById(staff_id); %>
+    <!-- NAVBAR -->
+    <% System.out.print(staff_id);%>
+    <!-- NAVBAR -->
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-1 py-3">
-        <div class="container-xl">
-          <a class="navbar-brand" >
-                <img src="img/logo-clinic.png" class="h-20" alt="logo">
-            </a>
-           
-            <!-- Nav -->
-                <div class="navbar-nav mx-lg-auto">
-                    <a class="nav-item nav-link" aria-current="page" style="font-family:times;font-size:30px; word-spacing:30px; letter-spacing:10px">KLINIK KESIHATAN MANIR</a>
-
-                </div>
-                </div>
-    </nav>
     <!-- NAVBAR -->
     
    <div class="wrapper">
-    <div class="sidebar" style="height:auto">
+    <div class="sidebar" style="margin-bottom: -5000px; padding-bottom: 5000px;">
         <h2>Navigation</h2>
         <ul>
             <li><a href="admin-account.jsp">My Profile</a></li>
