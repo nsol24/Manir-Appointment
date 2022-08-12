@@ -49,7 +49,7 @@ public class BookAppController extends HttpServlet {
 		
 		
 		request.setAttribute("app", AppointmentDAO.getAllAppointment());
-		RequestDispatcher view = request.getRequestDispatcher("patient-MyApp.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("patient-homepage.jsp");
 		view.forward(request, response);
 	}
 
