@@ -120,7 +120,7 @@
 					
 					
 					<label class="dob">Date</label><br>
-                    <select class="dob" name="pat_date" required>
+                    <select class="dob" name="app_date" required>
                         <option disabled="disabled" selected="selected">-- Choose option --</option>
                         
                         <option value="16/08/2022">16/08/2022</option>
@@ -138,7 +138,7 @@
 					
 					<input class="app_desc" type="hidden" name="app_desc" value="TBN"/><br>
 					
-					<input class="staff_id" type="hidden" name="staff_id" value="0000"/><br>
+					<input class="staff_id" type="hidden" name="staff_id" value="1001"/><br>
                     
 
                    
