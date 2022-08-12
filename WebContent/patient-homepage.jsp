@@ -64,7 +64,7 @@
                 <!-- Nav -->
                 <div class="navbar-nav mx-lg-auto">
                     <a class="nav-item nav-link active" href="patient-homepage.jsp" aria-current="page" style=" float: left; diaplay:block;  border-right:1px sold white; font-size:16px; font-family:times">BOOK APPOINTMENT</a>
-                    <p>&ensp;&ensp;&ensp;&ensp;</p><a class="nav-item nav-link" href="ListAppController?pat_icNum=<%=pat.getPat_icNum()%>" style=" font-size:16px; font-family:times">MY APPOINTMENT</a>
+                    <p>&ensp;&ensp;&ensp;&ensp;</p><a class="nav-item nav-link" href="AppListController" style=" font-size:16px; font-family:times">MY APPOINTMENT</a>
                    <p>&ensp;&ensp;&ensp;&ensp;</p> <a class="nav-item nav-link" href="About.html" style="float:left; font-size:16px; font-family:times">ABOUT US</a>
                     <p>&ensp;&ensp;&ensp;&ensp;</p><a class="nav-item nav-link" href="Contact.html" style="float:left; font-size:16px; font-family:times">CONTACT US</a>
 
