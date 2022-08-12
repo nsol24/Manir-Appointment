@@ -36,10 +36,10 @@ public class AppointmentDAO {
                     "INSERT INTO appointment (app_date, app_type, app_status, app_desc, pat_icnum, staff_id) VALUES (?,?,?,?,?,?)");
             ps.setString(1, app_date);
             ps.setString(2, app_type);
-            ps.setString(4, app_status);
-            ps.setString(5, app_desc);
-            ps.setString(6, pat_icnum);
-            ps.setInt(7, staff_id);
+            ps.setString(3, app_status);
+            ps.setString(4, app_desc);
+            ps.setString(5, pat_icnum);
+            ps.setInt(6, staff_id);
             ps.executeUpdate();
         } catch (Exception ex) {
             ex.printStackTrace();
