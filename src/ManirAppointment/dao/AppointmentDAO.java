@@ -1,12 +1,13 @@
 package ManirAppointment.dao;
 
-import java.sql.Connection;
+import java.sql.*;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
+import java.security.*;
 import ManirAppointment.model.Appointment;
 import db.connection.ConnectionManager;
 
@@ -22,7 +23,7 @@ public class AppointmentDAO {
 	
 	
 	//CREATE APPOINTMENT
-    public void addAppointment(Appointment bean) {
+    public void addAppointment(Appointment bean) throws NoSuchAlgorithmException{
         app_date = bean.getApp_date();
         app_type = bean.getApp_type();
         app_status = bean.getApp_status();
@@ -41,8 +42,8 @@ public class AppointmentDAO {
             ps.setString(5, pat_icnum);
             ps.setInt(6, staff_id);
             ps.executeUpdate();
-        } catch (Exception ex) {
-            ex.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 

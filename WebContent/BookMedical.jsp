@@ -113,7 +113,7 @@
                 <h2>Medical Check-up Booking</h2>
                 <p>Please fill in this form to book your appointment slot. Please attend the appointment booked at morning session (The latest at 10:00) to avoid long queue. </p>
     <hr>
-                <form class="patient-register-form" method="POST" action="BookAppController" onsubmit="alert('success');">
+                <form class="patient-register-form" method="POST" action="BookAppointmentController" onsubmit="alert('success');">
 			
                     <label class="ic">IC Number</label><br>
                     <input placeholder="Enter IC Number (e.g 990323115148)" class="ic" type="text" name="pat_icnum" required><br><br>
