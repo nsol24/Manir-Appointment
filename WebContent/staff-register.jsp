@@ -29,14 +29,6 @@
     <link rel="icon" href="img/favicon.png">
 </head>
 <body class="register-option-body">
-<!-- get session -->
-	<!-- received from login page -->
-	<% int staff_id = (Integer) session.getAttribute("sessionId");%>  
-	<!-- want to get customer details -->
-	<% Staff staff = StaffDAO.getStaffById(staff_id); %>
-    <!-- NAVBAR -->
-    <% System.out.print(staff_id);%>
-    <!-- NAVBAR -->
 
     <!-- NAVBAR -->
     
