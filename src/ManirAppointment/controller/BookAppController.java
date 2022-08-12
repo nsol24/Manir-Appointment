@@ -2,8 +2,6 @@ package ManirAppointment.controller;
 
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -21,7 +19,7 @@ import ManirAppointment.model.Appointment;
 @WebServlet("/BookAppController")
 public class BookAppController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	AppointmentDAO dao;
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -44,16 +42,13 @@ public class BookAppController extends HttpServlet {
 		app.setPat_icNum(request.getParameter("pat_icnum"));
 		
 		app.setApp_date(request.getParameter("app_date"));
-		app.setPat_phonenum(Integer.parseInt(request.getParameter("pat_phonenum")));
+		app.setApp_status(request.getParameter("app_status"));
 		app.setApp_type(request.getParameter("app_type"));
+		app.setApp_desc(request.getParameter("app_desc"));
+		app.setStaff_id(Integer.parseInt(request.getParameter("staff_id")));
 		
-		//try {dao.addAppointment(app);
-		//} 
-		//catch (NoSuchAlgorithmException e) {
-			// TODO Auto-generated catch block
-			//e.printStackTrace();
-		//}
-		//request.setAttribute("app", AppointmentDAO.getAllAppointment());
+		
+		request.setAttribute("app", AppointmentDAO.getAllAppointment());
 		RequestDispatcher view = request.getRequestDispatcher("patient-MyApp.jsp");
 		view.forward(request, response);
 	}

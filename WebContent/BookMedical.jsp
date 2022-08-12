@@ -119,14 +119,10 @@
                     <input placeholder="Enter IC Number (e.g 990323115148)" class="ic" type="text" name="pat_icnum" required><br><br>
 					
 					
-					<label class="phone">Phone Number</label><br>
-                    <input placeholder="Enter phone number" class="phone" type="text" name="pat_phonenum" required><br><br>
-
-                    <label class="dob">Date</label><br>
+					<label class="dob">Date</label><br>
                     <select class="dob" name="pat_date" required>
                         <option disabled="disabled" selected="selected">-- Choose option --</option>
-                        <option value="09/08/2022">09/08/2022</option>
-                        <option value="11/08/2022">11/08/2022</option>
+                        
                         <option value="16/08/2022">16/08/2022</option>
                         <option value="18/08/2022">18/08/2022</option>
                         <option value="22/08/2022">22/08/2022</option>
@@ -134,10 +130,18 @@
                         <option value="29/08/2022">29/08/2022</option>
                      
                     </select><br>
-
-                    <label class="app_type">Type</label><br>
-                    <input placeholder="Medical Checkup" class="app_type" type="text" name="app_type" readonly/><br>
+                    
+                     <label class="app_type">Type</label><br>
+                    <input placeholder="Medical Checkup" class="app_type" type="text" name="app_type" value="Medical Checkup" readonly/><br>
 					
+					<input class="app_status" type="hidden" name="app_status" value="Pending"/><br>
+					
+					<input class="app_desc" type="hidden" name="app_desc" value="TBN"/><br>
+					
+					<input class="staff_id" type="hidden" name="staff_id" value="0000"/><br>
+                    
+
+                   
                     <input type="submit" style="margin-left:250px;border:0px;width:90px; height:40px; color:white; background-color:#3973ac" value="Submit">
                 </form>
                 

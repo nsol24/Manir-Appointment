@@ -3,14 +3,12 @@ package ManirAppointment.model;
 import java.util.Date;
 
 public class Appointment {
-	private int app_id, pat_phonenum;
+	private int app_id;
 	private String app_date;
-	private String app_time;
 	private String app_type;
 	private String app_status;
 	private String app_desc;
 	private String pat_icNum;
-	private String pat_name;
 	private int staff_id;
 	
 	Patient pat;
@@ -28,12 +26,7 @@ public class Appointment {
 	public void setApp_date(String app_date) {
 		this.app_date = app_date;
 	}
-	public String getApp_time() {
-		return app_time;
-	}
-	public void setApp_time(String app_time) {
-		this.app_time = app_time;
-	}
+	
 	public String getApp_type() {
 		return app_type;
 	}
@@ -77,18 +70,6 @@ public class Appointment {
 	public void setStaff(Staff staff) {
 		this.staff = staff;
 	}
-	public String getPat_name() {
-		return pat_name;
-	}
-	public void setPat_name(String pat_name) {
-		this.pat_name = pat_name;
-	}
 	
-	public int getPat_phonenum() {
-		return pat_phonenum;
-	}
-	public void setPat_phonenum(int pat_phonenum) {
-		this.pat_phonenum = pat_phonenum;
-	}
 	
 }
