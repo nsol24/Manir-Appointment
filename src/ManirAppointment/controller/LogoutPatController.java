@@ -30,7 +30,7 @@ public class LogoutPatController extends HttpServlet {
 		// TODO Auto-generated method stub
 		try {
 			HttpSession session = request.getSession(true);
-			session.setAttribute("sessionEmail", null);
+			session.setAttribute("sessionICNum", null);
 			session.invalidate();
 			response.sendRedirect("Index.html");
 		}

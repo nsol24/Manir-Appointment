@@ -34,7 +34,7 @@
     <div class="sidebar" style="margin-bottom: -5000px; padding-bottom: 5000px;">
         <h2>Navigation</h2>
         <ul>
-                        <li><a href="admin-account.jsp">My Profile</a></li>
+                        <li><a href="rec-account.jsp">My Profile</a></li>
             <li><a href="PatientListController">List of Patients</a></li>
             <li><a href="admin-ListApp.jsp">Manage Appointments</a></li>
             <li><a href="LogOutStaffController">Log Out</a></li>
