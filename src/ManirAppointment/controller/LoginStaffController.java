@@ -69,7 +69,7 @@ public class LoginStaffController extends HttpServlet {
 				}
 				else
 				{
-					RequestDispatcher view = request.getRequestDispatcher("Index.html"); 	 // logged-in page
+					RequestDispatcher view = request.getRequestDispatcher("rec-account.jsp"); 	 // logged-in page
 					view.forward(request, response);
 				}
 				
