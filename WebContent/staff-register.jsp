@@ -74,7 +74,7 @@
 
 					<label class="pasword">Password</label><br>
                     <input placeholder="Enter password" class="password" type="password" name="staff_password" required><br><br>
-                    <input class="manager_id" type="hidden" name="manager_id" value="<% session.getAttribute("sessionId");%> "/>" required>
+                    <input class="manager_id" type="hidden" name="manager_id" value="<c:out value="${sessionId}"/>" required>
                     
                     
                     <input type="submit" style="margin-left:250px;border:0px;width:90px; height:40px; color:white; background-color:#3973ac" value="Register">
