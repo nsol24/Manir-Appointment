@@ -63,8 +63,16 @@ public class LoginStaffController extends HttpServlet {
 				System.out.println("Login Success!");
 				request.setAttribute("s", StaffDAO.getStaffById(staff.getStaff_id()));   //to retrieve user info
 				System.out.print(staff_id);
-				RequestDispatcher view = request.getRequestDispatcher("admin-account.jsp"); 	 // logged-in page
+				if(staff_password == "123456") {
+					RequestDispatcher view = request.getRequestDispatcher("admin-account.jsp"); 	 // logged-in page
 					view.forward(request, response);
+				}
+				else
+				{
+					RequestDispatcher view = request.getRequestDispatcher("Index.html"); 	 // logged-in page
+					view.forward(request, response);
+				}
+				
 				
 			}
 			//redirect to invalidLoggin.jsp if user is not valid
