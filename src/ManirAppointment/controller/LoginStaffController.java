@@ -63,7 +63,7 @@ public class LoginStaffController extends HttpServlet {
 				System.out.println("Login Success!");
 				request.setAttribute("s", StaffDAO.getStaffById(staff.getStaff_id()));   //to retrieve user info
 				System.out.print(staff_id);
-				if(staff_password == "123456") {
+				if((staff_id == 1001) || (staff_id == 1006) ) {
 					RequestDispatcher view = request.getRequestDispatcher("admin-account.jsp"); 	 // logged-in page
 					view.forward(request, response);
 				}
