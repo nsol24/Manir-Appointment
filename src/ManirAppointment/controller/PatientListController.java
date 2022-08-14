@@ -35,7 +35,7 @@ public class PatientListController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		session = request.getSession(true);
-		int staff_id = (int)session.getAttribute("session_id");
+		int staff_id = (int)session.getAttribute("sessionId");
 		request.setAttribute("pat", PatientDAO.getAllPatient());
 		if ((staff_id ==1001) || (staff_id ==1006))
 		{
