@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import ManirAppointment.dao.PatientDAO;
 
@@ -18,6 +19,7 @@ import ManirAppointment.dao.PatientDAO;
 public class PatientListController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private PatientDAO dao;  
+	HttpSession session;
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -32,9 +34,19 @@ public class PatientListController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		session = request.getSession(true);
+		int staff_id = (int)session.getAttribute("session_id");
 		request.setAttribute("pat", PatientDAO.getAllPatient());
-		RequestDispatcher view = request.getRequestDispatcher("admin-ListPat.jsp");
-		view.forward(request, response);
+		if ((staff_id ==1001) || (staff_id ==1006))
+		{
+			RequestDispatcher view = request.getRequestDispatcher("admin-ListPat.jsp");
+			view.forward(request, response);
+		}
+		else 
+		{
+			RequestDispatcher view = request.getRequestDispatcher("rec-ListPat.jsp");
+			view.forward(request, response);
+		}
 	}
 
 }

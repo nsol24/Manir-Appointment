@@ -52,7 +52,7 @@ public class RegisterStaffController extends HttpServlet {
 					e.printStackTrace();
 				}
 				request.setAttribute("staff", StaffDAO.getAllStaff());
-				RequestDispatcher view = request.getRequestDispatcher("admin-login.jsp");
+				RequestDispatcher view = request.getRequestDispatcher("admin-ListStaff.jsp");
 				view.forward(request, response);
 			}
 	}
