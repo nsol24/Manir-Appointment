@@ -48,7 +48,45 @@ public class AppointmentDAO {
             e.printStackTrace();
         }
     }
+    public static List<Appointment> getAppointmentById(String pat_icNum) 
+	{
+		List<Appointment> app = new ArrayList<Appointment>();
+		
+		try {
+			currentCon = ConnectionManager.getConnection();
+			ps = currentCon.prepareStatement("select * from appointment where pat_icNum?");
+			ps.setString(1,pat_icNum);
+			
+			ResultSet rs = ps.executeQuery();
+			System.out.print(pat_icNum);
 
+			while (rs.next()) 
+			{
+				 
+				Appointment a = new Appointment();
+
+				    a.setApp_id(rs.getInt("app_id"));
+					a.setApp_date(rs.getString("app_date"));
+					a.setApp_type(rs.getString("app_type"));
+					a.setApp_status(rs.getString("app_status"));
+					a.setApp_desc(rs.getString("app_desc"));
+					a.setQueuNum(rs.getInt("app_queuNum"));
+					a.setPat_icNum(rs.getString("pat_icnum"));
+				
+				
+				app.add(a);
+
+			}
+			currentCon.close();
+		} 
+		
+		catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		return app;
+	}
+    
+    
 	// LIST ALL APPOINTMENT 
 	public static List<Appointment> getAllAppointment() 
 	{
