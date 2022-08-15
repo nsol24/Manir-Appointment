@@ -33,13 +33,11 @@ public class UpdateSlotController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		int appSlot_id = Integer.parseInt(request.getParameter("appSlot_id"));
+		int as = Integer.parseInt(request.getParameter("appSlot_id"));
 		
-		request.setAttribute("appSlot", AppointmentSlotDAO.getAppointmentById(appSlot_id));
+		request.setAttribute("appSlot", AppointmentSlotDAO.getAppointmentById(as));
 		RequestDispatcher view = request.getRequestDispatcher("admin-updateSlot.jsp");
 		view.forward(request, response);
-	
-	
 	}
 
 	/**
