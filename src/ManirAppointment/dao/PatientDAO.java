@@ -141,10 +141,9 @@ public class PatientDAO {
 		
 		try {
 			con = ConnectionManager.getConnection();
-			ps = con.prepareStatement("UPDATE patient SET pat_address = ?, pat_phonenum = ? WHERE pat_icNum = ?");
-			ps.setString(1, pat_address);
-			ps.setInt(2, pat_phonenum);
-			ps.execute();
+			String query = "UPDATE patient SET pat_address = '"+pat_address+"' pat_phonenum = '"+pat_phonenum+"' WHERE pat_icNum = '"+pat_icNum+"' ";
+			stmt = con.createStatement();
+			stmt.executeUpdate(query);
 		}
 		catch(Exception e) {
 			e.printStackTrace();
