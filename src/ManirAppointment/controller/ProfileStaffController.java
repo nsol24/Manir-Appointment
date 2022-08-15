@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import ManirAppointment.dao.StaffDAO;
 import ManirAppointment.model.Staff;
@@ -18,7 +19,7 @@ import ManirAppointment.model.Staff;
 @WebServlet("/ProfileStaffController")
 public class ProfileStaffController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	HttpSession session; 
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -40,12 +41,13 @@ public class ProfileStaffController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		session = request.getSession(true);
+		int staff_id = (int)session.getAttribute("sessionId");
 		Staff staff = new Staff();
-		
+		staff.setStaff_id(staff_id);
 		staff.setStaff_phoneNum(Integer.parseInt(request.getParameter("staff_phoneNum")));
 		
         StaffDAO.updateStaff(staff);
-        request.setAttribute("staff",StaffDAO.getStaffById(staff.getStaff_id()));
 		
         RequestDispatcher view = request.getRequestDispatcher("admin-account.jsp");
         view.forward(request, response);
