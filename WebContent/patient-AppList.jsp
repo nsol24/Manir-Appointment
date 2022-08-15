@@ -2,7 +2,7 @@
     pageEncoding="ISO-8859-1"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<%@ page import="ManirAppointment.model.Patient,ManirAppointment.dao.PatientDAO,java.sql.*, java.util.*" %>
+<%@ page import="ManirAppointment.model.Patient,ManirAppointment.model.Appointment,ManirAppointment.dao.PatientDAO,ManirAppointment.dao.AppointmentDAO,java.sql.*, java.util.*" %>
     <%
     	//prevent caching of jsp pages
     	response.setHeader("Cache-Control","no-cache");
@@ -17,7 +17,7 @@
     		
     %>
     <!--  import class if using JSTL -->
-<%@ page import="ManirAppointment.model.Patient,ManirAppointment.dao.PatientDAO,java.sql.*, java.util.*" %>
+<%@ page import="ManirAppointment.model.Patient,ManirAppointment.model.Appointment,ManirAppointment.dao.PatientDAO,ManirAppointment.dao.AppointmentDAO,java.sql.*, java.util.*" %>
     
 <!DOCTYPE html>
 <html>
@@ -120,7 +120,8 @@
            <c:forEach items="${app}" var="a">
                     
                     <tr style="border:1px solid #bd9cc9;">
-                        <td ><c:out value="${a.app_id}"/></td><td><c:out value="${a.app_icnum}"/></td>
+                        <td ><c:out value="${a.app_id}"/></td>
+                        <td><c:out value="${a.app_icnum}"/></td>
                         
                         <td><c:out value="${a.app_date}"/></td><td><c:out value="${a.app_type}"/></td>
                         
