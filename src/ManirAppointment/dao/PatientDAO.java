@@ -135,7 +135,7 @@ public class PatientDAO {
 	//UCD UPDATE ACCOUNT - PATIENT	
 	public static void updatePatient (Patient updatePatient) {
 		
-		
+		pat_icNum = updatePatient.getPat_icNum();
 		pat_address = updatePatient.getPat_address();
 		pat_phonenum = updatePatient.getPat_phoneNum();
 		

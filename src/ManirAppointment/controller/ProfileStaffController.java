@@ -49,8 +49,14 @@ public class ProfileStaffController extends HttpServlet {
 		
         StaffDAO.updateStaff(staff);
 		
-        RequestDispatcher view = request.getRequestDispatcher("admin-account.jsp");
-        view.forward(request, response);
+        if((staff_id == 1014) || (staff_id == 1014) ) {
+        	RequestDispatcher view = request.getRequestDispatcher("admin-account.jsp");
+        	view.forward(request, response);
+        }
+        else {
+        	RequestDispatcher view = request.getRequestDispatcher("rec-account.jsp");
+        	view.forward(request, response);
+        }
 	}
 
 }

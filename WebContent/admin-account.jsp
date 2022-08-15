@@ -61,7 +61,7 @@
                 <p>STAFF ID</p>
                 <input type="text" name="staff_id" value="<%=staff.getStaff_id()%>"readonly><br>
                  <p>PHONE NO</p>
-                <input type="text" name="staff_phoneNum" value="<%=staff.getStaff_phoneNum()%>"> <br>
+                <input type="text" name="staff_phoneNum" value="0<%=staff.getStaff_phoneNum()%>"> <br>
                 <p>NAME</p>
                 <input type="text" name="staff_name" value="<%=staff.getStaff_name()%>"readonly><br>
                     

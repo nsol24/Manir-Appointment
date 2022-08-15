@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import ManirAppointment.dao.PatientDAO;
 import ManirAppointment.model.Patient;
@@ -21,7 +22,7 @@ import ManirAppointment.model.Patient;
 @WebServlet("/ProfileController")
 public class ProfileController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+	HttpSession session;
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -46,9 +47,11 @@ public class ProfileController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-Patient pat = new Patient();
+		session = request.getSession(true);
+		String pat_icnum = (String) session.getAttribute("sessionICNum");
+		Patient pat = new Patient();
 		
-	
+		pat.setPat_icNum(pat_icnum);
 		pat.setPat_address(request.getParameter("pat_address"));
 		pat.setPat_phoneNum(Integer.parseInt(request.getParameter("pat_phoneNum")));
 		
