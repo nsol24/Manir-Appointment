@@ -34,7 +34,7 @@ public class RemoveSlotController extends HttpServlet {
 		int appSlot_id = Integer.parseInt(request.getParameter("appSlot_id"));
 		
 		dao.deleteAppointmentSlot(appSlot_id);
-		response.sendRedirect("admin-viewSlot.jsp");
+		response.sendRedirect("ViewSlotController");
 	
 	
 	}
