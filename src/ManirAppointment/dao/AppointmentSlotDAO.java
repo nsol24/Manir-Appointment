@@ -37,7 +37,7 @@ public class AppointmentSlotDAO {
 
         try {
             con = ConnectionManager.getConnection();
-            ps = con.prepareStatement(  "INSERT INTO appointment (appSlot_date, appSlot_time, appSlot_status, appSlot_quantity) VALUES (?,?,?,?)");
+            ps = con.prepareStatement(  "INSERT INTO appointment_slot (appSlot_date, appSlot_time, appSlot_status, appSlot_quantity) VALUES (?,?,?,?)");
             ps.setString(1, appSlot_date);
             ps.setString(2, appSlot_time);
             ps.setString(3, appSlot_status);
