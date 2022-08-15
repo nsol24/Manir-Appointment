@@ -89,13 +89,13 @@
                  <div class="container">
         <h3 style="color:#006666">MEDICAL CHECK-UP (BELAJAR / KERJA / LAIN-LAIN)</h3>
  
-        <img src="img/medicalcheck.jpg" class="img-rounded" alt="Responsive Image"  width="307" height="240" style="margin-left:50px;" />
+        <img src="img/medicalcheck.jpg" class="img-rounded" alt="Responsive Image"  width="307" height="240" />
     </div><br><br>
     <hr style="border-top:5px solid #006666">
     <div class="container">
         <h3 style="color:#001a1a; font-family:abadi">WALK-IN (PESAKIT LUAR)</h3>
  
-        <img src="img/walkin.jpg" class="img-rounded" alt="Responsive Image"  width="307" height="240" style="margin-left:50px;" />
+        <img src="img/walkin.jpg" class="img-rounded" alt="Responsive Image"  width="307" height="240" />
     <br>
     <a href="BookMedical.jsp" target="_blank">Book Now</a>
     </div>       
