@@ -67,7 +67,7 @@
                         <td><c:out value="${s.appSlot_date}"/></td><td><c:out value="${s.appSlot_quantity}"/></td>
                         
                         <td><c:out value="${s.appSlot_status}"/></td>
-                        <td><a href=RemoveSlotController?appSlot_id=<%="${s.appSlot_id}"%>></a>
+                        <td><a href=RemoveSlotController?appSlot_id=<%="${s.appSlot_id}"%>>DELETE</a>
                      </tr>
                     </c:forEach>
          
