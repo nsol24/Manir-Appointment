@@ -141,7 +141,7 @@ public class PatientDAO {
 		
 		try {
 			con = ConnectionManager.getConnection();
-			String query = "UPDATE patient SET pat_address = '"+pat_address+"' pat_phonenum = '"+pat_phonenum+"' WHERE pat_icNum = '"+pat_icNum+"' ";
+			String query = "UPDATE patient SET pat_address = '"+pat_address+"', pat_phonenum = '"+pat_phonenum+"' WHERE pat_icNum = '"+pat_icNum+"' ";
 			stmt = con.createStatement();
 			stmt.executeUpdate(query);
 		}
