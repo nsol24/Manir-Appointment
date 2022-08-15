@@ -60,7 +60,7 @@
                     <tr>
                         <td><c:out value="${s.staff_id}"/></td><td><c:out value="${s.staff_name}"/></td>
                         
-                        <td><c:out value="${s.staff_phoneNum}"/></td><td><c:out value="${s.staff_email}"/></td>
+                        <td><c:out value="0g${s.staff_phoneNum}"/></td><td><c:out value="${s.staff_email}"/></td>
                         
                         <td><c:out value="${s.staff_role}"/></td>
                         
