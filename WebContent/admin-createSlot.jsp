@@ -39,7 +39,7 @@
                 <form class="patient-register-form" method="POST" action="CreateSlotController" onsubmit="alert('success');">
 
                     <label class="name">DATE</label><br>
-                    <input placeholder="Enter date format(DD-MM-YYYY)" class="name" type="text" name="appSlot_date" required><br><br>
+                    <input placeholder="Enter date format(DD/MM/YYYY) eg. 15/07/2022" class="name" type="text" name="appSlot_date" required><br><br>
 
                     <label class="quantity">QUANTITY</label><br>
                     <input placeholder="Enter quantity" class="phone" type="number" name="appSlot_quantity" required><br><br>

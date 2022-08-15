@@ -43,9 +43,9 @@ public class CreateSlotController extends HttpServlet {
 		// TODO Auto-generated method stub
 		Appointment_Slot appSlot= new Appointment_Slot();
 		appSlot.setAppSlot_date(request.getParameter("appSlot_date"));
-		appSlot.setAppSlot_date(request.getParameter("appSlot_quantity"));
-		appSlot.setAppSlot_date(request.getParameter("appSlot_time"));
-		appSlot.setAppSlot_date(request.getParameter("appSlot_status"));
+		appSlot.setAppSlot_quantity(Integer.parseInt(request.getParameter("appSlot_quantity")));
+		appSlot.setAppSlot_time(request.getParameter("appSlot_time"));
+		appSlot.setAppSlot_status(request.getParameter("appSlot_status"));
 		
 		try {
 			dao.addSlot(appSlot);
