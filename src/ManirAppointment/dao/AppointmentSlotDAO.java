@@ -86,10 +86,7 @@ public class AppointmentSlotDAO {
 			
 			ResultSet rs = ps.executeQuery();
 
-			while (rs.next()) 
-			{
-				 
-				Appointment_Slot a = new Appointment_Slot();
+			Appointment_Slot a = new Appointment_Slot();
 
 				    a.setAppSlot_id(rs.getInt("appSlot_id"));
 					a.setAppSlot_date(rs.getString("appSlot_date"));
@@ -99,8 +96,6 @@ public class AppointmentSlotDAO {
 				
 				
 				appSlot.add(a);
-
-			}
 			con.close();
 		} 
 		
