@@ -37,7 +37,7 @@ public class PatientListController extends HttpServlet {
 		session = request.getSession(true);
 		int staff_id = (int)session.getAttribute("sessionId");
 		request.setAttribute("pat", PatientDAO.getAllPatient());
-		if ((staff_id ==1014) || (staff_id ==1064))
+		if ((staff_id ==1001) || (staff_id ==1006 ))
 		{
 			RequestDispatcher view = request.getRequestDispatcher("admin-ListPat.jsp");
 			view.forward(request, response);
