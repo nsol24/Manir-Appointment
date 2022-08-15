@@ -23,10 +23,10 @@
         <h2>Navigation</h2>
         <ul>
             <li><a href="admin-account.jsp">My Profile</a></li>
-            <li><a href="admin-ListPat.jsp">List of Patients</a></li>
-            <li><a href="admin-ListStaff.jsp">List of Staff</a></li>
+            <li><a href="PatientListController">List of Patients</a></li>
+            <li><a href="StaffListController">List of Staff</a></li>
             <li><a href="admin-ListApp.jsp">Manage Appointments</a></li>
-            <li><a href="admin-viewSlot.jsp">Manage Appointment Slot</a></li>
+            <li><a href="ViewSlotController">Manage Appointment Slot</a></li>
             <li><a href="staff-register.jsp">Create Staff</a></li>
             <li><a href="LogOutStaffController">Log Out</a></li>
         </ul> 

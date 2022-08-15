@@ -36,7 +36,7 @@
         <ul>
                         <li><a href="admin-account.jsp">My Profile</a></li>
             <li><a href="PatientListController">List of Patients</a></li>
-            <li><a href="admin-ListStaff.jsp">List of Staff</a></li>
+            <li><a href="StaffListController">List of Staff</a></li>
             <li><a href="admin-ListApp.jsp">Manage Appointments</a></li>
             <li><a href="ViewSlotController">Manage Appointment Slot</a></li>
             <li><a href="staff-register.jsp">Create Staff</a></li>
