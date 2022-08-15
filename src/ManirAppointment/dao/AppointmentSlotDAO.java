@@ -75,7 +75,7 @@ public class AppointmentSlotDAO {
 		return appSlot;
 	}
 	//LIST APP BY ID
-	public static List<Appointment_Slot> getAppointmentById(int appSlot_id) 
+	public static List<Appointment_Slot> getAppointmentSlotById(int appSlot_id) 
 	{
 		List<Appointment_Slot> appSlot = new ArrayList<Appointment_Slot>();
 		
@@ -86,7 +86,10 @@ public class AppointmentSlotDAO {
 			
 			ResultSet rs = ps.executeQuery();
 
-			Appointment_Slot a = new Appointment_Slot();
+			while (rs.next()) 
+			{
+				 
+				Appointment_Slot a = new Appointment_Slot();
 
 				    a.setAppSlot_id(rs.getInt("appSlot_id"));
 					a.setAppSlot_date(rs.getString("appSlot_date"));
@@ -96,6 +99,8 @@ public class AppointmentSlotDAO {
 				
 				
 				appSlot.add(a);
+
+			}
 			con.close();
 		} 
 		

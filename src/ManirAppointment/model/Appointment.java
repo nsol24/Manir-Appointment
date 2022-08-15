@@ -9,6 +9,7 @@ public class Appointment {
 	private String app_status;
 	private String app_desc;
 	private String pat_icNum;
+	private int queuNum;
 	private int staff_id;
 	
 	Patient pat;
@@ -69,6 +70,12 @@ public class Appointment {
 	}
 	public void setStaff(Staff staff) {
 		this.staff = staff;
+	}
+	public int getQueuNum() {
+		return queuNum;
+	}
+	public void setQueuNum(int queuNum) {
+		this.queuNum = queuNum;
 	}
 	
 	

@@ -17,7 +17,7 @@ public class AppointmentDAO {
 	static ResultSet rs = null;
 	static PreparedStatement ps = null;
 	static Statement stmt = null;
-	int app_id, staff_id;
+	int app_id, staff_id, queuNum, appSlot_id;
 	String pat_icnum, app_type, app_date, app_status, app_desc, pat_icNum;
 	
 	
@@ -34,13 +34,15 @@ public class AppointmentDAO {
         try {
             currentCon = ConnectionManager.getConnection();
             ps = currentCon.prepareStatement(
-                    "INSERT INTO appointment (app_date, app_type, app_status, app_desc, pat_icnum, staff_id) VALUES (?,?,?,?,?,?)");
+                    "INSERT INTO appointment (app_date, app_type, app_status, app_desc, queuNum, appSlot_id, pat_icnum, staff_id) VALUES (?,?,?,?,?,?,?,?)");
             ps.setString(1, app_date);
             ps.setString(2, app_type);
             ps.setString(3, app_status);
             ps.setString(4, app_desc);
-            ps.setString(5, pat_icnum);
-            ps.setInt(6, staff_id);
+            ps.setInt(5, queuNum);
+            ps.setInt(6, appSlot_id);
+            ps.setString(7, pat_icnum);
+            ps.setInt(8, staff_id);
             ps.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

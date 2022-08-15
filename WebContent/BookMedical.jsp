@@ -137,7 +137,10 @@
 					<input class="app_status" type="hidden" name="app_status" value="Pending"/><br>
 					
 					<input class="app_desc" type="hidden" name="app_desc" value="TBN"/><br>
-					
+					<input class="queue_num" type="hidden" name="queueNum" value="0"/><br>
+                    
+					<input class="appSlot_id" type="hidden" name="appSlot_id" value="14"/><br>
+                    
 					<input class="staff_id" type="hidden" name="staff_id" value="1001"/><br>
                     
 

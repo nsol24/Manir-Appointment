@@ -35,7 +35,7 @@ public class UpdateSlotController extends HttpServlet {
 		// TODO Auto-generated method stub
 		int appSlot_id = Integer.parseInt(request.getParameter("appSlot_id"));
 		System.out.println("SAYA SUKA "+appSlot_id);
-		request.setAttribute("appSlot", AppointmentSlotDAO.getAppointmentById(appSlot_id));
+		request.setAttribute("appSlot", AppointmentSlotDAO.getAppointmentSlotById(appSlot_id));
 		RequestDispatcher view = request.getRequestDispatcher("admin-updateSlot.jsp");
 		view.forward(request, response);
 	}

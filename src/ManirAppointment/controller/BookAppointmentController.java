@@ -44,6 +44,7 @@ public class BookAppointmentController extends HttpServlet {
 		app.setApp_date(request.getParameter("app_date"));
 		app.setApp_type(request.getParameter("app_type"));
 		app.setApp_status(request.getParameter("app_status"));
+		app.setQueuNum(Integer.parseInt(request.getParameter("app_status")));
 		
 		app.setApp_desc(request.getParameter("app_desc"));
 		app.setStaff_id(Integer.parseInt(request.getParameter("staff_id")));
