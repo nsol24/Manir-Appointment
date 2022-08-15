@@ -45,7 +45,12 @@
     </div>
     <div class="main_content"><br><div class="patient-register-inner-container" style="width:1000px">
             <div class="container-fluid" style="width:100%">
-            <h1 style="font-family:times; float:center">SLOT MANAGEMENT</h1><br>
+            <h1 style="font-family:times; float:center">SLOT MANAGEMENT</h1>
+            <a href="admin-createSlotWalkIn.jsp"><button  style="background-color: #4d194d; border: none;  color: white;  padding: 4px 5px;  text-align: center;
+  text-decoration: none;  display: inline-block; float:right; font-size: 14px;">+ New Slot for Walk-in</button></a>
+  <a href="admin-createSlot.jsp"><button  style="background-color: #4d194d; border: none;  color: white;  padding: 4px 5px;  text-align: center;
+  text-decoration: none;  display: inline-block; float:right; font-size: 14px;">+ New Slot for Medical Check-up</button></a>
+  <br>  <br>  <br>
             <div class="patient-list-container" style="">
                 <table style="border:1px solid; color:black; background:#e9deed;">
                     <tr style="border:1px solid #bd9cc9; font-family:times; ">
@@ -53,6 +58,7 @@
                        <th style=" background:#482d52">SLOT TIME</th>
                        <th style=" background:#482d52; width:150px" >DATE</th>
                        <th style=" background:#482d52">SLOT_QUANTITY</th>
+                       <th style=" background:#482d52">SLOT_STATUS</th>
                        <th style=" background:#482d52">ACTION</th>
                     </tr> 
            <c:forEach items="${appSlot}" var="s">
@@ -62,7 +68,7 @@
                         
                         <td><c:out value="${s.appSlot_date}"/></td><td><c:out value="${s.appSlot_quantity}"/></td>
                         
-                        
+                        <td><c:out value="${s.appSlot_status}"/></td>
                      </tr>
                     </c:forEach>
          

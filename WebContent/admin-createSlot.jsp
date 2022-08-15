@@ -17,9 +17,8 @@
 
 
     <!-- NAVBAR -->
-    
-   <div class="wrapper">
-    <div class="sidebar" style="margin-bottom: -5000px; padding-bottom: 5000px;">
+    <div class="wrapper" >
+    <div class="sidebar"  style="margin-bottom: -5000px; padding-bottom: 5000px;">
         <h2>Navigation</h2>
         <ul>
             <li><a href="admin-account.jsp">My Profile</a></li>
@@ -35,32 +34,20 @@
             <div class="patient-register-inner-container" style="width:800px">
 
                 <h2>CREATE NEW SLOT</h2>
-                <p>Please fill in the form to create an account for new staff.</p>
+                <p>Please fill in the form to create new slot for medical check-up.</p>
     <hr>
-                <form class="patient-register-form" method="POST" action="RegisterStaffController" onsubmit="alert('success');">
+                <form class="patient-register-form" method="POST" action="CreateSlotController" onsubmit="alert('success');">
 
-                    <label class="name">Name</label><br>
-                    <input placeholder="Enter full name as per IC or passport" class="name" type="text" name="staff_name" required><br><br>
+                    <label class="name">DATE</label><br>
+                    <input placeholder="Enter date format(DD-MM-YYYY)" class="name" type="text" name="appSlot_date" required><br><br>
 
-                    <label class="phone">Phone Number</label><br>
-                    <input placeholder="Enter phone number" class="phone" type="text" name="staff_phonenum" required><br><br>
+                    <label class="quantity">QUANTITY</label><br>
+                    <input placeholder="Enter quantity" class="phone" type="number" name="appSlot_quantity" required><br><br>
                     
-                    <label class="name">Email</label><br>
-                    <input placeholder="Enter email" class="name" type="text" name="staff_email" required><br><br>
+                    <label class="name">TIME</label><br>
+                    <input placeholder="Enter time of slot" class="name" type="text" name="appSlot_time" required><br><br>
                     
-                    
-                    <label class="role">Role</label><br>
-                    <select class="role" name="staff_role" required>
-                        <option disabled="disabled" selected="selected">-- Choose option --</option>
-                        <option value="Receptionist">Receptionist</option>
-                        <option value="Admin">Admin</option>
-                        <option value="Doctor">Doctor</option>
-                        <option value="Other">Other</option>
-                    </select><br>
-
-					<label class="pasword">Password</label><br>
-                    <input placeholder="Enter password" class="password" type="password" name="staff_password" required><br><br>
-                    <input class="manager_id" type="text" name="manager_id" value="1001" hidden="hidden">
+                    <input class="appSlot_status" type="text" name="appSlot_status" value="Available" hidden="hidden">
                     
                     <input type="submit" style="margin-left:250px;border:0px;width:90px; height:40px; color:white; background-color:#3973ac" value="Register">
                 </form>

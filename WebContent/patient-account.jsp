@@ -77,7 +77,7 @@
     </div>
         <div class="col-md-5 border-right">
             <div class="p-3 py-5">
-            <form action="ProfileController" method="post" style="font-size:30px">
+            <form action="ProfileController" method="post" style="font-size:30px" onsubmit="alert('success');">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                  
                     <h3 class="text-center" style="margin-left:10px; font-family:times">PROFILE SETTINGS</h3>

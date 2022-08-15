@@ -91,13 +91,18 @@
  
         <img src="img/medicalcheck.jpg" class="img-rounded" alt="Responsive Image"  width="307" height="240" />
     </div><br><br>
+    <a href="BookMedical.jsp"><button  style="background-color: #1f6040; border: none;  color: white;  padding: 15px 32px;  text-align: center;
+  text-decoration: none;  display: inline-block;  font-size: 16px;">Book Now</button></a>
+   <br><br>
     <hr style="border-top:5px solid #006666">
     <div class="container">
         <h3 style="color:#001a1a; font-family:abadi">WALK-IN (PESAKIT LUAR)</h3>
  
         <img src="img/walkin.jpg" class="img-rounded" alt="Responsive Image"  width="307" height="240" />
-    <br>
-    <a href="BookMedical.jsp" target="_blank">Book Now</a>
+    <br><br><br>
+    <a href="BookMedical.jsp"><button style="background-color: #1f6040; border: none;  color: white;  padding: 15px 32px;  text-align: center;
+  text-decoration: none;  display: inline-block;  font-size: 16px;">Book Now</button></a>
+    <br><br><br><br>
     </div>       
         </div>
     </div>
