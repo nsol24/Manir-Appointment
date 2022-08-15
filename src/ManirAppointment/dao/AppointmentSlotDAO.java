@@ -74,6 +74,65 @@ public class AppointmentSlotDAO {
 
 		return appSlot;
 	}
+	//LIST APP BY ID
+	public static List<Appointment_Slot> getAppointmentById(int appSlot_id) 
+	{
+		List<Appointment_Slot> appSlot = new ArrayList<Appointment_Slot>();
+		
+		try {
+			con = ConnectionManager.getConnection();
+			ps = con.prepareStatement("select * from appointment_slot where appSlot_id=?");
+			ps.setInt(1,appSlot_id);
+			
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) 
+			{
+				 
+				Appointment_Slot a = new Appointment_Slot();
+
+				    a.setAppSlot_id(rs.getInt("appSlot_id"));
+					a.setAppSlot_date(rs.getString("appSlot_date"));
+					a.setAppSlot_time(rs.getString("appSlot_time"));
+					a.setAppSlot_status(rs.getString("appSlot_status"));
+					a.setAppSlot_quantity(rs.getInt("appSlot_quantity"));
+				
+				
+				appSlot.add(a);
+
+			}
+			con.close();
+		} 
+		
+		catch (Exception ex) {
+			ex.printStackTrace();
+		}
+		return appSlot;
+	}
+	
+	// UPDATE APPOINTMENT SLOT
+		public void UpdateAppointmentSlot(Appointment_Slot bean) 
+		{
+			appSlot_date = bean.getAppSlot_date();
+	        appSlot_time= bean.getAppSlot_time();
+	        appSlot_status = bean.getAppSlot_status();
+	        appSlot_quantity= bean.getAppSlot_quantity();
+
+		
+			try 
+			{
+				con = ConnectionManager.getConnection();
+				String query = "UPDATE appointment_slot SET appSlot_date= '" + appSlot_date + "', appSLot_time= '" + appSlot_time + "', appSlot_status= '" + appSlot_status + "', appSlot_quantity= '" + appSlot_quantity + "'  WHERE appSlot_id= '"+ appSlot_id +"' ";
+
+				stmt = con.createStatement();
+				stmt.executeUpdate(query);
+			}
+			catch (Exception ex) 
+			{
+				ex.printStackTrace();
+				
+			}
+		}
 	
 	//delete slot
 	public void deleteAppointmentSlot(int appSlot_id) {

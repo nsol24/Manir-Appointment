@@ -49,7 +49,7 @@
                     
                     <input class="appSlot_status" type="text" name="appSlot_status" value="Available" hidden="hidden">
                     
-                    <input type="submit" style="margin-left:250px;border:0px;width:90px; height:40px; color:white; background-color:#3973ac" value="Register">
+                    <input type="submit" style="margin-left:250px;border:0px;width:90px; height:40px; color:white; background-color:#3973ac" value="Submit">
                 </form>
                </div>
                </div></div>
