@@ -74,4 +74,17 @@ public class AppointmentSlotDAO {
 
 		return appSlot;
 	}
+	
+	//delete slot
+	public void deleteAppointmentSlot(int appSlot_id) {
+		try {
+			con = ConnectionManager.getConnection(); // 2. establish connection
+			ps = con.prepareStatement("DELETE FROM appointment_slot WHERE appSlot_id=?"); // 3. create statement
+			ps.setInt(1, appSlot_id);
+			ps.executeUpdate();// 3. execute statement
+
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+	}
 }

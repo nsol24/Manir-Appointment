@@ -47,10 +47,8 @@
             <div class="container-fluid" style="width:100%">
             <h1 style="font-family:times; float:center">SLOT MANAGEMENT</h1>
             <a href="admin-createSlotWalkIn.jsp"><button  style="background-color: #4d194d; border: none;  color: white;  padding: 4px 5px;  text-align: center;
-  text-decoration: none;  display: inline-block; float:right; font-size: 14px;">+ New Slot for Walk-in</button></a>
-  <a href="admin-createSlot.jsp"><button  style="background-color: #4d194d; border: none;  color: white;  padding: 4px 5px;  text-align: center;
-  text-decoration: none;  display: inline-block; float:right; font-size: 14px;">+ New Slot for Medical Check-up</button></a>
-  <br>  <br>  <br>
+  text-decoration: none;  display: inline-block; float:right; font-size: 14px;">+ New Slot</button></a>
+   <br>  <br>  <br>
             <div class="patient-list-container" style="">
                 <table style="border:1px solid; color:black; background:#e9deed;">
                     <tr style="border:1px solid #bd9cc9; font-family:times; ">
@@ -69,6 +67,7 @@
                         <td><c:out value="${s.appSlot_date}"/></td><td><c:out value="${s.appSlot_quantity}"/></td>
                         
                         <td><c:out value="${s.appSlot_status}"/></td>
+                        <td><a href=RemoveSlotController?appSlot_id=<%="${s.appSlot_id}"%>></a>
                      </tr>
                     </c:forEach>
          
