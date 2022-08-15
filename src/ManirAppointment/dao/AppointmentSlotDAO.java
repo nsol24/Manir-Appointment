@@ -55,15 +55,16 @@ public class AppointmentSlotDAO {
 		try {
 			con = ConnectionManager.getConnection();
 			stmt = con.createStatement();
-			ResultSet rs = stmt.executeQuery("select appSlot_id, appSlot_time, appSlot_date, appSlot_quantity from appointment_slot");
+			ResultSet rs = stmt.executeQuery("select appSlot_id, appSlot_time, appSlot_date, appSlot_status, appSlot_quantity from appointment_slot");
 
 			while (rs.next()) {
 				Appointment_Slot p = new Appointment_Slot();
 				p.setAppSlot_id(rs.getInt("appSlot_id"));
 				p.setAppSlot_time(rs.getString("appSlot_time"));
 				p.setAppSlot_date(rs.getString("appSlot_date"));
-				p.setAppSlot_quantity(rs.getInt("appSlot_quantity"));
 				p.setAppSlot_status(rs.getString("appSlot_status"));
+				p.setAppSlot_quantity(rs.getInt("appSlot_quantity"));
+				
 				appSlot.add(p);
 
 			}
