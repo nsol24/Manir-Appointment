@@ -56,8 +56,7 @@ public class ProfileController extends HttpServlet {
 		pat.setPat_phoneNum(Integer.parseInt(request.getParameter("pat_phoneNum")));
 		
         PatientDAO.updatePatient(pat);
-        request.setAttribute("pat",PatientDAO.getPatientByIcNum(pat.getPat_icNum()));
-		
+        
         RequestDispatcher view = request.getRequestDispatcher("patient-account.jsp");
         view.forward(request, response);
 	}
