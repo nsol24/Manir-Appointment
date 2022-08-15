@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import ManirAppointment.dao.AppointmentSlotDAO;
-import ManirAppointment.dao.PatientDAO;
 /**
  * Servlet implementation class ViewSlotController
  */
