@@ -31,7 +31,11 @@ public class MyAppController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		String pat_icNum= request.getParameter("pat_icNum");
+    	System.out.print(pat_icNum);
+		request.setAttribute("app", AppointmentDAO.getAllAppointmentByIc(pat_icNum));
+		RequestDispatcher view = request.getRequestDispatcher("patient-listApp.jsp");
+		view.forward(request, response);
 	}
 
 	/**
@@ -39,11 +43,7 @@ public class MyAppController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String pat_icNum= request.getParameter("pat_icNum");
-    	System.out.print(pat_icNum);
-		request.setAttribute("app", AppointmentDAO.getAllAppointmentByIc(pat_icNum));
-		RequestDispatcher view = request.getRequestDispatcher("patient-listApp.jsp");
-		view.forward(request, response);
+		
 	}
 
 }
