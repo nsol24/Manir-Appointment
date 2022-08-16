@@ -46,7 +46,7 @@
     <div class="main_content"><br><div class="patient-register-inner-container" style="width:1000px">
             <div class="container-fluid" style="width:100%">
             <h1 style="font-family:times; float:center">SLOT MANAGEMENT</h1>
-            <a href="admin-createSlotWalkIn.jsp"><button  style="background-color: #4d194d; border: none;  color: white;  padding: 4px 5px;  text-align: center;
+            <a href="admin-createSlot.jsp"><button  style="background-color: #4d194d; border: none;  color: white;  padding: 4px 5px;  text-align: center;
   text-decoration: none;  display: inline-block; float:right; font-size: 14px;">+ New Slot</button></a>
    <br>  <br>  <br>
             <div class="patient-list-container" style="">
