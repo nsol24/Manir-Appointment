@@ -70,14 +70,14 @@
 <div class="container-fluid" style="width:100%">
             <h1 style="font-family:times; float:center">List of Appointments</h1><br>
             <div class="patient-list-container" >
-                <table style="border:1px solid; color:black; background:#e9deed;">
-                    <tr style="border:1px solid #bd9cc9; font-family:times; ">
-                       <td style=" background:#669999">ID</td>
-                       <td style=" background:#669999">IC NUMBER</td>
-                       <td style=" background:#669999; width:150px" >DATE</td>
-                       <td style=" background:#669999">TYPE</td>
-                       <td style=" background:#669999">STATUS</td>
-                       <td style=" background:#669999; width:250px ">DESCRIPTION</td>
+                <table style="border:1px solid; width: 80%;color:black; background:#e9deed;">
+                    <tr style="border:1px solid #bd9cc9; height: 70px; font-family:times; ">
+                       <td style=" background:#669999; width:50px; float:center">ID</td>
+                       <td style=" background:#669999; width:50px; float:center">IC NUMBER</td>
+                       <td style=" background:#669999; width:50px; float:center" >DATE</td>
+                       <td style=" background:#669999; width:50px; float:center">TYPE</td>
+                       <td style=" background:#669999; width:50px; float:center">STATUS</td>
+                       <td style=" background:#669999; width:50px; float:center ">DESCRIPTION</td>
                     </tr> 
            <c:forEach items="${app}" var="a">
                     
@@ -94,6 +94,6 @@
          
                 </table>
             </div></div></div>
-            </div>
+           
 </body>
 </html>

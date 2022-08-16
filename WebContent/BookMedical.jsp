@@ -65,11 +65,11 @@
             </div>
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
               <ul class="nav navbar-nav">
-                <li class=""><a href="patient-homepage.jsp">Book Appointment</a></li>
+                <li class="active"><a href="patient-homepage.jsp">Book Appointment</a></li>
                 <li class=""><a href="MyAppController?pat_icNum=<%=pat.getPat_icNum()%>">My Appointment</a></li>
                 <li class=""><a href="AboutUs2.html">About Us</a></li>
                 <li class=""><a href="ContactUs2.html">Contact Us</a></li>
-                <li class="active"><a href="ProfileController?pat_icnum=<%=pat.getPat_icNum()%>">My Profile</a></li>
+                <li class=""><a href="ProfileController?pat_icnum=<%=pat.getPat_icNum()%>">My Profile</a></li>
 				<li class=""><a href="LogoutPatController">Logout</a></li>
               </ul>
             </div>
