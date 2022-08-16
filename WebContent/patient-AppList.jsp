@@ -66,19 +66,18 @@
           </div>
         </div> </nav>    
                 
-
- <div class="main_content"><br><div class="patient-register-inner-container" style="width:1000px">
-            <div class="container-fluid" style="width:100%">
+<div class="w3-container w3-white" style="margin-top:50px"> 
+<div class="container-fluid" style="width:100%">
             <h1 style="font-family:times; float:center">List of Appointments</h1><br>
             <div class="patient-list-container" >
                 <table style="border:1px solid; color:black; background:#e9deed;">
                     <tr style="border:1px solid #bd9cc9; font-family:times; ">
-                       <th style=" background:#482d52">ID</th>
-                       <th style=" background:#482d52">IC NUMBER</th>
-                       <th style=" background:#482d52; width:150px" >DATE</th>
-                       <th style=" background:#482d52">TYPE</th>
-                       <th style=" background:#482d52">STATUS</th>
-                       <th style=" background:#482d52; width:250px ">DESCRIPTION</th>
+                       <th style=" background:#669999">ID</th>
+                       <th style=" background:#669999">IC NUMBER</th>
+                       <th style=" background:#669999; width:150px" >DATE</th>
+                       <th style=" background:#669999">TYPE</th>
+                       <th style=" background:#669999">STATUS</th>
+                       <th style=" background:#669999; width:250px ">DESCRIPTION</th>
                     </tr> 
            <c:forEach items="${app}" var="a">
                     
