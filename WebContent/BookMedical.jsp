@@ -26,52 +26,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medical Checkup | Manir Health Clinic</title>
-    <link rel="stylesheet" href="css/Style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    
+    <title>Home | Manir Health Clinic</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Candal">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Link Bootstrap JS and JQuery -->
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
 </head>
 
-<body>
+<body style="background:#004d4d">
 <!-- get session -->
 	<!-- received from login page -->
 	<% String pat_icNum = (String) session.getAttribute("sessionICNum");%>  
 	<!-- want to get customer details -->
 	<% Patient pat = PatientDAO.getPatientByIcNum(pat_icNum); %>
-    <!-- NAVBAR -->
-    <% System.out.print(pat_icNum);%>
-
-     <nav class="navbar navbar-expand-lg navbar-white bg-light px-0 py-2" style="background-color:black">
-        <div class="container-xl">
-            <!-- Logo -->
-            <a class="navbar-brand">
-                <img src="img/logo-clinic.png" class="h-20" alt="logo">
-            </a>
-                      
-             <div class="navbar-nav mx-lg-auto">
-              <a class="nav-item nav-link active" style="font-size:30px;font-family:georgia;letter-spacing: 8px;text-shadow: 2px 2px 4px #bfbfbf; word-spacing: 20px; font-weight:bold; color:#006666">KLINIK KESIHATAN MANIR</a>
-            </div></div></nav>
-            
-              
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-0 py-2">
-        <div class="container-xl">
-                       
-            <!-- Navbar toggle -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Collapse -->
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                
-                <!-- Nav -->
-                <div class="navbar-nav mx-lg-auto">
-                    <a class="nav-item nav-link" href="patient-homepage.jsp" aria-current="page" style=" float: left; diaplay:block;  border-right:1px sold white; font-size:16px; font-family:times">BOOK APPOINTMENT</a>
-                    <p>&ensp;&ensp;&ensp;&ensp;</p><a class="nav-item nav-link" href="ListAppController?pat_icNum=<%=pat.getPat_icNum()%>" style=" font-size:16px; font-family:times">MY APPOINTMENT</a>
-                   <p>&ensp;&ensp;&ensp;&ensp;</p> <a class="nav-item nav-link" href="About.html" style="float:left; font-size:16px; font-family:times">ABOUT US</a>
-                    <p>&ensp;&ensp;&ensp;&ensp;</p><a class="nav-item nav-link" href="Contact.html" style="float:left; font-size:16px; font-family:times">CONTACT US</a>
-
-                </div>
-                
+    <!-- header -->
+<% System.out.print(pat_icNum);%>
+ 
+     <nav class="navbar navbar-default navbar-fixed-top"  style="background-color: RGBA(13, 70, 83, 0.78)">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+              <a class="navbar-brand"><img src="img/logo-clinic.png" class="img-responsive" style="width: 140px; margin-top: -16px;"></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="patient-homepage.jsp">Book Appointment</a></li>
+                <li class=""><a href="MyAppController?pat_icNum=<%=pat.getPat_icNum()%>">My Appointment</a></li>
+                <li class=""><a href="AboutUs2.html">About Us</a></li>
+                <li class=""><a href="ContactUs2.html">Contact Us</a></li>
+                <li class=""><a href="ProfileController?pat_icnum=<%=pat.getPat_icNum()%>">My Profile</a></li>
+				<li class=""><a href="LogoutPatController">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div> </nav>
                                 
                 <!-- Right navigation -->
                 <div class="navbar-nav ms-lg-1">
