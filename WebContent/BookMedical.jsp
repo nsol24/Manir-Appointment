@@ -52,7 +52,7 @@
     <!-- header -->
 <% System.out.print(pat_icNum);%>
  
-     <nav class="navbar navbar-default navbar-fixed-top"  style="background-color: RGBA(13, 70, 83, 0.78)">
+    <nav class="navbar navbar-default navbar-fixed-top"  style="background-color: RGBA(13, 70, 83, 0.78)">
         <div class="container">
           <div class="col-md-12">
             <div class="navbar-header">
@@ -65,50 +65,19 @@
             </div>
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="patient-homepage.jsp">Book Appointment</a></li>
+                <li class=""><a href="patient-homepage.jsp">Book Appointment</a></li>
                 <li class=""><a href="MyAppController?pat_icNum=<%=pat.getPat_icNum()%>">My Appointment</a></li>
                 <li class=""><a href="AboutUs2.html">About Us</a></li>
                 <li class=""><a href="ContactUs2.html">Contact Us</a></li>
-                <li class=""><a href="ProfileController?pat_icnum=<%=pat.getPat_icNum()%>">My Profile</a></li>
+                <li class="active"><a href="ProfileController?pat_icnum=<%=pat.getPat_icNum()%>">My Profile</a></li>
 				<li class=""><a href="LogoutPatController">Logout</a></li>
               </ul>
             </div>
           </div>
         </div> </nav>
-                                
-                <!-- Right navigation -->
-                <div class="navbar-nav ms-lg-1">
-                    <!-- Action -->
-                    <div class="d-flex align-items-lg-center mt-0 mt-lg-0">
-                       <a class="btn btn-sm btn-primary w-full w-lg-auto" href="ProfileController?pat_icnum=<%=pat.getPat_icNum()%>">My Profile</a>
-                        <p>&ensp;</p>
-                        <div class="d-flex align-items-lg-center mt-0 mt-lg-0">
-                        <a href="LogoutPatController" class="btn btn-sm btn-primary w-full w-lg-auto">
-                            Logout
-                        </a>
-                    </div>
-                </div>
-</div>
-                </div>
-            </div>
-            </nav>
-            <!-- Navbar toggle -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Collapse -->
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <!-- Nav -->
-                <div class="navbar-nav mx-lg-auto">
-                      <a class="nav-item nav-link" href="patient-homepage.jsp" aria-current="page">Home</a>
-                    <a class="nav-item nav-link active" href="PatientViewController?pat_icNum=<%=pat.getPat_icNum()%>">Account</a>
-                    <a class="nav-item nav-link" href="ViewPatAppController?pat_icNum=<%=pat.getPat_icNum()%>">My Appointment</a>
-                    <a class="nav-item nav-link" href="CreateAppointmentController?pat_icNum=<%=pat.getPat_icNum()%>">Create Appointment</a>
-                    <a class="nav-item nav-link" href="LogoutPatController">Logout</a>
-                    
-                </div>
-                
-            </div>
+	
+<br><br>
+<div class="w3-container w3-white" style="margin-top:50px">
 	
    
             <div class="patient-register-inner-container">
@@ -151,7 +120,7 @@
                     <input type="submit" style="margin-left:250px;border:0px;width:90px; height:40px; color:white; background-color:#3973ac" value="Submit">
                 </form>
                 
-            </div>
+            </div></div>
        </body>
 <footer style="background-color:#004d4d; height:90px; width:auto;">    
 <p style="padding:30px; font-family: verdana; color:white; text-align: center;"><i>@Developed by Nur Solehah Mohamad Zulkifli (2020837614)</i>
