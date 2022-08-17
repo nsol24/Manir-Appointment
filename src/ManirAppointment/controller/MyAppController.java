@@ -34,7 +34,7 @@ public class MyAppController extends HttpServlet {
 		String pat_icNum= request.getParameter("pat_icNum");
     	System.out.print(pat_icNum);
 		request.setAttribute("app", AppointmentDAO.getAllAppointmentByIc(pat_icNum));
-		RequestDispatcher view = request.getRequestDispatcher("patient-MyApp.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("patient-AppList.jsp");
 		view.forward(request, response);
 	}
 
