@@ -82,7 +82,7 @@
            <c:forEach items="${app}" var="a">
                     
                     <tr style="border:1px solid #bd9cc9;">
-                          <td ><p>1<c:out value="${p.app_id}"/></p></td><td><p>18/08/2022<c:out value="${p.app_date}"/></p></td>
+                          <td ><p>1</p><c:out value="${p.app_id}"/></td><td><p>18/08/2022</p><c:out value="${p.app_date}"/></td>
                         
                         <td>Medical Check-up<c:out value="${p.app_type}"/></td><td>PENDING<c:out value="${p.app_status}"/></td>
                         
