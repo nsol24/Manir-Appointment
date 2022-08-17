@@ -31,6 +31,7 @@ public class LogOutStaffController extends HttpServlet {
 		try {
 			HttpSession session = request.getSession(true);
 			session.setAttribute("sessionId", null);
+			
 			session.invalidate();
 			response.sendRedirect("staff-login.jsp");
 		}
